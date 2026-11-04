@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://dachbmqktuj4m"]
+
+[ext_resource type="PackedScene" uid="uid://io0fafl4n2uc" path="res://wooden-chess-set/source/WoodenChessSet.blend" id="1_i32rt"]
+
+[node name="WoodenChessSet" unique_id=530802068 instance=ExtResource("1_i32rt")]
