@@ -2,6 +2,18 @@
 
 [ext_resource type="PackedScene" uid="uid://io0fafl4n2uc" path="res://wooden-chess-set/source/WoodenChessSet.blend" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://bobn8eo1simqb" path="res://board.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://cg8q2vav8vuv2" path="res://Pieces/WPieces/WBishop.tscn" id="3_w48qg"]
+[ext_resource type="PackedScene" uid="uid://chp0octxqfd0w" path="res://Pieces/WPieces/WKing.tscn" id="4_vivmo"]
+[ext_resource type="PackedScene" uid="uid://c5l43os0jggd2" path="res://Pieces/WPieces/WKnight.tscn" id="5_2cqfq"]
+[ext_resource type="PackedScene" uid="uid://c64losg6lncqd" path="res://Pieces/WPieces/WPawn.tscn" id="6_yaehf"]
+[ext_resource type="PackedScene" uid="uid://dey5u028xn4at" path="res://Pieces/WPieces/WQueen.tscn" id="7_074og"]
+[ext_resource type="PackedScene" uid="uid://c8c402n77pmkr" path="res://Pieces/WPieces/WRook.tscn" id="8_cegan"]
+[ext_resource type="PackedScene" uid="uid://c6jdoh14kutpd" path="res://Pieces/BPieces/BRook.tscn" id="9_82xsv"]
+[ext_resource type="PackedScene" uid="uid://c4ik8tsaifmwx" path="res://Pieces/BPieces/BBishop.tscn" id="10_getpj"]
+[ext_resource type="PackedScene" uid="uid://dty4ibfkw1xu7" path="res://Pieces/BPieces/BKing.tscn" id="11_ryguw"]
+[ext_resource type="PackedScene" uid="uid://5e2p1litrjwe" path="res://Pieces/BPieces/BKnight.tscn" id="12_d13ii"]
+[ext_resource type="PackedScene" uid="uid://cobxi50ybo855" path="res://Pieces/BPieces/BPawn.tscn" id="13_1u8w0"]
+[ext_resource type="PackedScene" uid="uid://b1hio6pealxhj" path="res://Pieces/BPieces/BQueen.tscn" id="14_0odxb"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0xm2m"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -30,3 +42,73 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.013563663, 0, 0.82957315)
 [node name="Seperated" type="Node3D" parent="." unique_id=123979660]
 
 [node name="Board" parent="Seperated" unique_id=623244403 instance=ExtResource("2_0xm2m")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+
+[node name="Pieces" type="Node3D" parent="Seperated" unique_id=545773215]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15, 0)
+
+[node name="Black" type="Node3D" parent="Seperated/Pieces" unique_id=1875390354]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, 0)
+
+[node name="BRook" parent="Seperated/Pieces/Black" unique_id=1278077037 instance=ExtResource("9_82xsv")]
+
+[node name="BBishop" parent="Seperated/Pieces/Black" unique_id=791047551 instance=ExtResource("10_getpj")]
+
+[node name="BKing" parent="Seperated/Pieces/Black" unique_id=1291872568 instance=ExtResource("11_ryguw")]
+
+[node name="BKnight" parent="Seperated/Pieces/Black" unique_id=2117407931 instance=ExtResource("12_d13ii")]
+
+[node name="BPawn" parent="Seperated/Pieces/Black" unique_id=437650630 instance=ExtResource("13_1u8w0")]
+
+[node name="BQueen" parent="Seperated/Pieces/Black" unique_id=1287390779 instance=ExtResource("14_0odxb")]
+
+[node name="White" type="Node3D" parent="Seperated/Pieces" unique_id=266982805]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.37, 0, 0)
+
+[node name="WRook" parent="Seperated/Pieces/White" unique_id=23778214 instance=ExtResource("8_cegan")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.37)
+
+[node name="WKnight" parent="Seperated/Pieces/White" unique_id=1936540952 instance=ExtResource("5_2cqfq")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0.265)
+
+[node name="WBishop" parent="Seperated/Pieces/White" unique_id=969502339 instance=ExtResource("3_w48qg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.165)
+
+[node name="WKing" parent="Seperated/Pieces/White" unique_id=451626557 instance=ExtResource("4_vivmo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.055)
+
+[node name="WQueen" parent="Seperated/Pieces/White" unique_id=870987718 instance=ExtResource("7_074og")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.055)
+
+[node name="WRook2" parent="Seperated/Pieces/White" unique_id=847390487 instance=ExtResource("8_cegan")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.37)
+
+[node name="WKnight2" parent="Seperated/Pieces/White" unique_id=429132326 instance=ExtResource("5_2cqfq")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, -0.265)
+
+[node name="WBishop2" parent="Seperated/Pieces/White" unique_id=1631567061 instance=ExtResource("3_w48qg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.165)
+
+[node name="WPawn1" parent="Seperated/Pieces/White" unique_id=482075283 instance=ExtResource("6_yaehf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11, 0, 0.37)
+
+[node name="WPawn2" parent="Seperated/Pieces/White" unique_id=2057648403 instance=ExtResource("6_yaehf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11, 0, 0)
+
+[node name="WPawn3" parent="Seperated/Pieces/White" unique_id=1029464240 instance=ExtResource("6_yaehf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.110000014, 0, 0)
+
+[node name="WPawn4" parent="Seperated/Pieces/White" unique_id=1777922167 instance=ExtResource("6_yaehf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.110000014, 0, 0)
+
+[node name="WPawn5" parent="Seperated/Pieces/White" unique_id=464067008 instance=ExtResource("6_yaehf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.110000014, 0, 0)
+
+[node name="WPawn6" parent="Seperated/Pieces/White" unique_id=1308889549 instance=ExtResource("6_yaehf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.110000014, 0, 0)
+
+[node name="WPawn7" parent="Seperated/Pieces/White" unique_id=124101374 instance=ExtResource("6_yaehf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.110000014, 0, 0)
+
+[node name="WPawn8" parent="Seperated/Pieces/White" unique_id=596707782 instance=ExtResource("6_yaehf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.110000014, 0, 0)
